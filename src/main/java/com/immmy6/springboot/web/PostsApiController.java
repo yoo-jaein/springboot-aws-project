@@ -1,6 +1,7 @@
 package com.immmy6.springboot.web;
 
 import com.immmy6.springboot.service.posts.PostsService;
+import com.immmy6.springboot.web.dto.PostsListResponseDto;
 import com.immmy6.springboot.web.dto.PostsResponseDto;
 import com.immmy6.springboot.web.dto.PostsSaveRequestDto;
 import com.immmy6.springboot.web.dto.PostsUpdateRequestDto;
@@ -42,4 +43,8 @@ public class PostsApiController {
         return postsService.findById(id);
     }
 
+    @GetMapping("/api/v1/posts/list")
+    public List<PostsListResponseDto> findAll() {
+        return postsService.findAllDesc();
+    }
 }

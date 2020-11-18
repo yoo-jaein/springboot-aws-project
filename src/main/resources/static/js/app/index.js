@@ -1,19 +1,19 @@
-var main = {
-    init : function () {
+var index = {
+    init : function() {
         var _this = this;
-        $('#btn-save').on('click', function () {
-            _this.save();
+        $('#btn-save').on('click', function() {
+            _this.save()
         });
 
-        $('#btn-update').on('click', function () {
+        $('#btn-update').on('click', function() {
             _this.update();
         });
 
-        $('#btn-delete').on('click', function () {
+        $('#btn-delete').on('click', function() {
             _this.delete();
         });
     },
-    save : function () {
+    save : function() {
         var data = {
             title: $('#title').val(),
             author: $('#author').val(),
@@ -28,12 +28,12 @@ var main = {
             data: JSON.stringify(data)
         }).done(function() {
             alert('글이 등록되었습니다.');
-            window.location.href = '/';
+            window.location.href = '/'; //글 등록이 성공하면 메인으로 이동
         }).fail(function (error) {
             alert(JSON.stringify(error));
         });
     },
-    update : function () {
+    update : function() {
         var data = {
             title: $('#title').val(),
             content: $('#content').val()
@@ -45,16 +45,16 @@ var main = {
             type: 'PUT',
             url: '/api/v1/posts/'+id,
             dataType: 'json',
-            contentType:'application/json; charset=utf-8',
+            contentType: 'application/json; charset=utf-8',
             data: JSON.stringify(data)
         }).done(function() {
             alert('글이 수정되었습니다.');
             window.location.href = '/';
-        }).fail(function (error) {
+        }).fail(function() {
             alert(JSON.stringify(error));
         });
     },
-    delete : function () {
+    delete : function() {
         var id = $('#id').val();
 
         $.ajax({
@@ -65,11 +65,10 @@ var main = {
         }).done(function() {
             alert('글이 삭제되었습니다.');
             window.location.href = '/';
-        }).fail(function (error) {
+        }).fail(function(error) {
             alert(JSON.stringify(error));
         });
     }
-
 };
 
-main.init();
+index.init();
