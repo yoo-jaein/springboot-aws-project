@@ -59,7 +59,7 @@ public class OAuthAttributes {
                 .name(name)
                 .email(email)
                 .picture(picture)
-                .role(Role.GUEST) // 기본 권한은 GUEST, USER만 글 작성 가능
+                .role(Role.USER) // 기본 권한은 GUEST, USER만 글 작성 가능
                 .build();
     }
 }
