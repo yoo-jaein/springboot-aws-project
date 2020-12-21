@@ -1,6 +1,6 @@
 package com.immmy6.springboot.web;
 
-import com.immmy6.springboot.service.posts.PostsService;
+import com.immmy6.springboot.service.PostsService;
 import com.immmy6.springboot.web.dto.PostsListResponseDto;
 import com.immmy6.springboot.web.dto.PostsResponseDto;
 import com.immmy6.springboot.web.dto.PostsSaveRequestDto;

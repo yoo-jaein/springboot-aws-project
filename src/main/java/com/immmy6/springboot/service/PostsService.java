@@ -1,4 +1,4 @@
-package com.immmy6.springboot.service.posts;
+package com.immmy6.springboot.service;
 
 import com.immmy6.springboot.domain.posts.Posts;
 import com.immmy6.springboot.domain.posts.PostsRepository;
