@@ -2,7 +2,7 @@ package com.immmy6.springboot.web;
 
 import com.immmy6.springboot.config.auth.LoginUser;
 import com.immmy6.springboot.config.auth.dto.SessionUser;
-import com.immmy6.springboot.service.posts.PostsService;
+import com.immmy6.springboot.service.PostsService;
 import com.immmy6.springboot.web.dto.PostsResponseDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
