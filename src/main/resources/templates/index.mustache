@@ -1,42 +1,124 @@
 {{>layout/header}}
 
-<h1>스프링부트로 시작하는 웹 서비스 Ver.2</h1>
-<div class="col-md-12">
-    <div class="row">
-        <div class="col-md-6">
-            <a href="/posts/save" role="button" class="btn btn-primary">글 등록</a>
-            {{#myName}}
-                Logged in as: <span id="user">{{myName}}</span>
-                <a href="/logout" class="btn btn-info active" role="button">Logout</a>
-            {{/myName}}
-            {{^myName}}
-                <a href="/oauth2/authorization/google" class="btn btn-success active" role="button">Google Login</a>
-                <a href="/oauth2/authorization/naver" class="btn btn-secondary active" role="button">Naver Login</a>
-            {{/myName}}
+{{>layout/navbar}}
+
+<!-- Page Content -->
+<div class="container">
+
+    <!-- Heading Row -->
+    <div class="row align-items-center my-5">
+        <div class="col-lg-7">
+            <img class="img-fluid rounded mb-4 mb-lg-0" src="https://cdn.pixabay.com/photo/2017/07/31/11/21/people-2557396_1280.jpg" alt="">
+        </div>
+        <!-- /.col-lg-8 -->
+        <div class="col-lg-5">
+            <h1 class="font-weight-light">여기 모여 함께 공부해요!</h1>
+            <p>This is a template that is great for small businesses. It doesn't have too much fancy flare to it, but it makes a great use of the standard Bootstrap core components. Feel free to use this template for any project you want!</p>
+            <a class="btn btn-primary" role="button" href="/posts/save">지금 바로 스터디 등록</a>
+        </div>
+        <!-- /.col-md-4 -->
+    </div>
+    <!-- /.row -->
+
+    <h2>지금 가장 인기 있는 주제</h2>
+    <!-- Call to Action Well -->
+    <div class="card text-white bg-secondary my-5 py-4 text-center">
+        <div class="card-body">
+            <span>Web</span> <span>Android</span> <span>React</span> <span>Node.js</span> <span>Springboot</span> <span>Kotlin</span> <span>Go</span>
         </div>
     </div>
-    <br>
-    <!-- 목록 출력 영역 -->
-    <table class="table table-horizontal table-bordered">
-        <thead class="thead-strong">
-        <tr>
-            <th>게시글번호</th>
-            <th>제목</th>
-            <th>작성자</th>
-            <th>최종수정일</th>
-        </tr>
-        </thead>
-        <tbody id="tbody">
-        {{#posts}}
+
+
+    <h2>지금 가장 인기 있는 스터디</h2>
+    <!-- Content Row -->
+    <div class="row">
+
+        <!-- /.col-md-4 -->
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card h-100">
+                <img class="card-img-top" src="https://cdn.pixabay.com/photo/2017/07/03/20/17/abstract-2468874_1280.jpg" alt="">
+                <div class="card-body">
+                    <h2 class="card-title">UI개발 스터디</h2>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod tenetur ex natus at dolorem enim! Nesciunt pariatur voluptatem sunt quam eaque, vel, non in id dolore voluptates quos eligendi labore.</p>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn btn-primary btn-sm">함께 하기</a>
+                </div>
+            </div>
+        </div>
+        <!-- /.col-md-4 -->
+
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card h-100">
+                <img class="card-img-top" src="https://cdn.pixabay.com/photo/2016/11/19/14/00/code-1839406_1280.jpg" alt="">
+                <div class="card-body">
+                    <h2 class="card-title">React 공부방</h2>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn btn-primary btn-sm">함께 하기</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card h-100">
+                <img class="card-img-top" src="https://cdn.pixabay.com/photo/2014/05/02/21/50/home-office-336377_1280.jpg" alt="">
+                <div class="card-body">
+                    <h2 class="card-title">자바 코테 준비</h2>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex numquam, maxime minus quam molestias corporis quod, ea minima accusamus.</p>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn btn-primary btn-sm">함께 하기</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card h-100">
+                <img class="card-img-top" src="https://cdn.pixabay.com/photo/2020/02/24/13/18/drone-4876172_1280.jpg" alt="">
+                <div class="card-body">
+                    <h2 class="card-title">드론 스터디</h2>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod tenetur ex natus at dolorem enim! Nesciunt pariatur voluptatem sunt quam eaque, vel, non in id dolore voluptates quos eligendi labore.</p>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn btn-primary btn-sm">함께 하기</a>
+                </div>
+            </div>
+        </div>
+        <!-- /.col-md-4 -->
+
+    </div>
+    <!-- /.row -->
+
+    <h2>전체 스터디</h2>
+    <div class="col-md-12">
+        <br>
+        <!-- 목록 출력 영역 -->
+        <table class="table table-horizontal table-bordered">
+            <thead class="thead-strong">
             <tr>
-                <td>{{id}}</td>
-                <td><a href="/posts/update/{{id}}">{{title}}</a></td>
-                <td>{{author}}</td>
-                <td>{{modifiedDate}}</td>
+                <th>게시글번호</th>
+                <th>제목</th>
+                <th>작성자</th>
+                <th>최종수정일</th>
             </tr>
-        {{/posts}}
-        </tbody>
-    </table>
+            </thead>
+            <tbody id="tbody">
+            {{#posts}}
+                <tr>
+                    <td>{{id}}</td>
+                    <td><a href="/posts/update/{{id}}">{{title}}</a></td>
+                    <td>{{author}}</td>
+                    <td>{{modifiedDate}}</td>
+                </tr>
+            {{/posts}}
+            </tbody>
+        </table>
+    </div>
+
 </div>
+<!-- /.container -->
+
 
 {{>layout/footer}}
