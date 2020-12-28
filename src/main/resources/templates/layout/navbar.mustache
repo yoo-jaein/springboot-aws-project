@@ -9,17 +9,26 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="navbar-collapse collapse">
+        <div class="navbar-collapse collapse" id="navbarResponsive">
             <ul class="nav navbar-nav navbar-global">
-                <li class="nav-item "><a class="nav-link" href="#">스터디 찾기</a></li>
-                <li class="nav-item "><a class="nav-link" href="#">랭킹</a></li>
+                <li class="nav-item "><a class="nav-link" href="/search">스터디 찾기</a></li>
+                <li class="nav-item "><a class="nav-link" href="/ranking">랭킹</a></li>
                 <li class="nav-item "><a class="nav-link" href="#">커뮤니티</a></li>
                 <li class="nav-item "><a class="nav-link" href="#">플래너</a></li>
             </ul>
 
             <ul class="nav navbar-nav ml-auto user-menu">
-                <li class="nav-item"><a class="nav-link" href="#">계정 만들기</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">로그인</a></li>
+                {{#myName}}
+                    <li class="nav-item"><a class="nav-link" href="#">{{myName}}님</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/logout">로그아웃</a></li>
+                {{/myName}}
+
+                {{^myName}}
+                    <li class="nav-item"><a class="nav-link" href="/login">계정 만들기</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/login">로그인</a></li>
+                {{/myName}}
+
+
             </ul>
         </div>
     </div>
