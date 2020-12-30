@@ -42,4 +42,14 @@ public class IndexController {
         return "posts-update";
     }
 
+    @GetMapping("/freeboard")
+    public String freeboard() {
+        return "freeboard";
+    }
+
+    @GetMapping("/prboard")
+    public String prboard() {
+        return "prboard";
+    }
+
 }

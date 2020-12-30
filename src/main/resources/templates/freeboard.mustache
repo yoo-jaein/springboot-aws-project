@@ -1,0 +1,44 @@
+{{>layout/header}}
+
+{{>layout/navbar}}
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light" style="color: #dcdcdc;">
+    <div class="container">
+        <div class="navbar-collapse collapse" id="navbarResponsive">
+            <ul class="nav navbar-nav navbar-global">
+                <li class="nav-item "><a class="nav-link" href="/freeboard">자유 게시판</a></li>
+                <li class="nav-item "><a class="nav-link" href="/prboard">홍보 게시판</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="col-md-12">
+        <br>
+        <!-- 목록 출력 영역 -->
+        <table class="table table-horizontal table-bordered">
+            <thead class="thead-strong">
+            <tr>
+                <th>게시글번호</th>
+                <th>제목</th>
+                <th>작성자</th>
+                <th>최종수정일</th>
+            </tr>
+            </thead>
+            <tbody id="tbody">
+            {{#posts}}
+                <tr>
+                    <td>{{id}}</td>
+                    <td><a href="/posts/update/{{id}}">{{title}}</a></td>
+                    <td>{{author}}</td>
+                    <td>{{modifiedDate}}</td>
+                </tr>
+            {{/posts}}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+{{>layout/footer}}
