@@ -3,7 +3,242 @@
 {{>layout/navbar}}
 
 <div class="container">
-    스터디 검색 페이지
+    <div class="container-fluid" style="padding: 10px;">
+
+        <div class="card bg-dark text-white">
+            <img src="https://cdn.pixabay.com/photo/2016/10/20/18/35/sunrise-1756274_1280.jpg" class="card-img" alt="" style="background-size: 100% 70%;">
+            <div class="card-img-overlay">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text">Last updated 3 mins ago</p>
+            </div>
+        </div>
+
+        <div class="row flex-nowrap" style="padding-top:20px;">
+            <div class="col-md-4" >
+                <div class="filter">
+                    <div class="filter__header border-bottom">
+                        <a href="#collapseFilterLanguage" data-toggle="collapse" aria-expanded="true" aria-controls="collapseFilterLanguage" style="text-decoration:none; color: black;">
+                            <h6>프로그래밍 언어</h6>
+                        </a>
+                    </div>
+
+                    <ul class="filter__list filter__language collapse show" id="collapseFilterLanguage" style="list-style-type:none;">
+                        <li class="checkbox-wrap">
+                            <input type="checkbox" id="challenge_filter_language_c" data-filter="c" data-filter-type="language">
+                            <label for="challenge_filter_language_c">
+                                <span>C</span>
+                            </label>
+                        </li>
+                        <li class="checkbox-wrap">
+                            <input type="checkbox" id="challenge_filter_language_cpp" data-filter="cpp" data-filter-type="language">
+                            <label for="challenge_filter_language_cpp">
+                                <span>C++</span>
+                            </label>
+                        </li>
+                        <li class="checkbox-wrap">
+                            <input type="checkbox" id="challenge_filter_language_csharp" data-filter="csharp" data-filter-type="language">
+                            <label for="challenge_filter_language_csharp">
+                                <span>C#</span>
+                            </label>
+                        </li>
+                        <li class="checkbox-wrap">
+                            <input type="checkbox" id="challenge_filter_language_go" data-filter="go" data-filter-type="language">
+                            <label for="challenge_filter_language_go">
+                                <span>Go</span>
+                            </label>
+                        </li>
+                        <li class="checkbox-wrap">
+                            <input type="checkbox" id="challenge_filter_language_java" data-filter="java" data-filter-type="language">
+                            <label for="challenge_filter_language_java">
+                                <span>Java</span>
+                            </label>
+                        </li>
+                        <li class="checkbox-wrap">
+                            <input type="checkbox" id="challenge_filter_language_javascript" data-filter="javascript" data-filter-type="language">
+                            <label for="challenge_filter_language_javascript">
+                                <span>JavaScript</span>
+                            </label>
+                        </li>
+                        <li class="checkbox-wrap">
+                            <input type="checkbox" id="challenge_filter_language_kotlin" data-filter="kotlin" data-filter-type="language">
+                            <label for="challenge_filter_language_kotlin">
+                                <span>Kotlin</span>
+                            </label>
+                        </li>
+                        <li class="checkbox-wrap">
+                            <input type="checkbox" id="challenge_filter_language_python" data-filter="python" data-filter-type="language">
+                            <label for="challenge_filter_language_python">
+                                <span>Python2</span>
+                            </label>
+                        </li>
+                        <li class="checkbox-wrap">
+                            <input type="checkbox" id="challenge_filter_language_python3" data-filter="python3" data-filter-type="language">
+                            <label for="challenge_filter_language_python3">
+                                <span>Python3</span>
+                            </label>
+                        </li>
+                        <li class="checkbox-wrap">
+                            <input type="checkbox" id="challenge_filter_language_ruby" data-filter="ruby" data-filter-type="language">
+                            <label for="challenge_filter_language_ruby">
+                                <span>Ruby</span>
+                            </label>
+                        </li>
+                        <li class="checkbox-wrap">
+                            <input type="checkbox" id="challenge_filter_language_scala" data-filter="scala" data-filter-type="language">
+                            <label for="challenge_filter_language_scala">
+                                <span>Scala</span>
+                            </label>
+                        </li>
+                        <li class="checkbox-wrap">
+                            <input type="checkbox" id="challenge_filter_language_swift" data-filter="swift" data-filter-type="language">
+                            <label for="challenge_filter_language_swift">
+                                <span>Swift</span>
+                            </label>
+                        </li>
+                        <li class="checkbox-wrap">
+                            <input type="checkbox" id="challenge_filter_language_mysql" data-filter="mysql" data-filter-type="language">
+                            <label for="challenge_filter_language_mysql">
+                                <span>MySQL</span>
+                            </label>
+                        </li>
+                        <li class="checkbox-wrap">
+                            <input type="checkbox" id="challenge_filter_language_oracle" data-filter="oracle" data-filter-type="language">
+                            <label for="challenge_filter_language_oracle">
+                                <span>Oracle</span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="filter">
+                    <div class="filter__header border-bottom">
+                        <a href="#collapseFilterHowTo" data-toggle="collapse" aria-expanded="true" aria-controls="collapseFilterHowTo" style="text-decoration:none; color: black;">
+                            <h6>진행 방법</h6>
+                        </a>
+                    </div>
+
+                    <ul class="filter__list filter__howto collapse show" id="collapseFilterHowTo" style="list-style-type:none;">
+                        <li class="checkbox-wrap">
+                            <input type="checkbox" id="online" data-filter="online" data-filter-type="howto">
+                            <label for="online">
+                                <span>온라인</span>
+                            </label>
+                        </li>
+                        <li class="checkbox-wrap">
+                            <input type="checkbox" id="offline" data-filter="offline" data-filter-type="howto">
+                            <label for="offline">
+                                <span>오프라인</span>
+                            </label>
+                        </li>
+                        <li class="checkbox-wrap">
+                            <input type="checkbox" id="free" data-filter="free" data-filter-type="howto">
+                            <label for="free">
+                                <span>완전 자율</span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="filter">
+                    <div class="filter__header border-bottom">
+                        <a href="#collapseFilterTerm" data-toggle="collapse" aria-expanded="true" aria-controls="collapseFilterTerm" style="text-decoration:none; color: black;">
+                            <h6>목표 기간</h6>
+                        </a>
+                    </div>
+
+                    <ul class="filter__list filter__term collapse show" id="collapseFilterTerm" style="list-style-type:none;">
+                        <li class="checkbox-wrap">
+                            <input type="checkbox" id="short" data-filter="12" data-filter-type="term">
+                            <label for="short">
+                                <span>1~2개월</span>
+                            </label>
+                        </li>
+                        <li class="checkbox-wrap">
+                            <input type="checkbox" id="mid" data-filter="36" data-filter-type="term">
+                            <label for="mid">
+                                <span>3~6개월</span>
+                            </label>
+                        </li>
+                        <li class="checkbox-wrap">
+                            <input type="checkbox" id="long" data-filter="6" data-filter-type="term">
+                            <label for="long">
+                                <span>6개월 이상</span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="filter">
+                    <div class="filter__header border-bottom">
+                        <a href="#collapseFilterCity" data-toggle="collapse" aria-expanded="true" aria-controls="collapseFilterCity" style="text-decoration:none; color: black;">
+                            <h6>활동 지역</h6>
+                        </a>
+                    </div>
+
+                    <ul class="filter__list filter__city collapse show" id="collapseFilterCity" style="list-style-type:none;">
+                        <li class="checkbox-wrap">
+                            <input type="checkbox" id="seoul" data-filter="seoul" data-filter-type="city">
+                            <label for="seoul">
+                                <span>서울</span>
+                            </label>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="filter">
+                    <div class="filter__header border-bottom">
+                        <a href="#collapseFilterLevel" data-toggle="collapse" aria-expanded="true" aria-controls="collapseFilterLevel" style="text-decoration:none; color: black;">
+                            <h6>권장 숙련도</h6>
+                        </a>
+                    </div>
+
+                    <ul class="filter__list filter__level collapse show" id="collapseFilterLevel" style="list-style-type:none;">
+                        <li class="checkbox-wrap">
+                            <input type="checkbox" id="level_1" data-filter="level_1" data-filter-type="level">
+                            <label for="level_1">
+                                <span>초보자</span>
+                            </label>
+                        </li>
+                        <li class="checkbox-wrap">
+                            <input type="checkbox" id="level_2" data-filter="level_2" data-filter-type="level">
+                            <label for="level_2">
+                                <span>중급자</span>
+                            </label>
+                        </li>
+                        <li class="checkbox-wrap">
+                            <input type="checkbox" id="level_3" data-filter="level_3" data-filter-type="level">
+                            <label for="level_3">
+                                <span>실력자</span>
+                            </label>
+                        </li>
+                        <li class="checkbox-wrap">
+                            <input type="checkbox" id="level_4" data-filter="level_4" data-filter-type="level">
+                            <label for="level_4">
+                                <span>현직자</span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <main role="main">
+                <h1>메인임</h1>
+                <h1>Main 2</h1>
+                <h1>Main 3</h1>
+                <h1>Main 4</h1>
+                <h1>Main 5</h1>
+                <h1>Main 6</h1>
+                <h1>Main 7</h1>
+                <h1>Main 8</h1>
+            </main>
+
+        </div>
+
+
+    </div>
 </div>
 
 {{>layout/footer}}
