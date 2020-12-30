@@ -2,9 +2,19 @@
 
 {{>layout/navbar}}
 
-<div class="container">
-    홍보게시판
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg" style="background-color: #dcdcdc;">
+    <div class="container">
+        <div class="navbar-collapse collapse" id="link_bar">
+            <ul class="nav navbar-nav navbar-global">
+                <li class="nav-item"><a class="nav-link" href="/freeboard">자유 게시판</a></li>
+                <li class="nav-item"><a class="nav-link" href="/prboard" style="border-bottom-style: solid;">홍보 게시판</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
+<div class="container">
     <div class="col-md-12">
         <br>
         <!-- 목록 출력 영역 -->
@@ -29,6 +39,7 @@
             </tbody>
         </table>
     </div>
+    <a class="btn btn-primary" role="button" href="/posts/save">글 작성</a>
 </div>
 
 {{>layout/footer}}

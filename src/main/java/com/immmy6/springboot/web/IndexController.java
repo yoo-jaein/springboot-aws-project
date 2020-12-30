@@ -28,7 +28,10 @@ public class IndexController {
     }
 
     @GetMapping("/posts/save")
-    public String postsSave() {
+    public String postsSave(Model model, @LoginUser SessionUser user) {
+        if (user != null) {
+            model.addAttribute("myName", user.getName());
+        }
         return "posts-save";
     }
 
@@ -43,12 +46,20 @@ public class IndexController {
     }
 
     @GetMapping("/freeboard")
-    public String freeboard() {
+    public String freeboard(Model model, @LoginUser SessionUser user) {
+        model.addAttribute("posts", postsService.findAllDesc());
+        if (user != null) {
+            model.addAttribute("myName", user.getName());
+        }
         return "freeboard";
     }
 
     @GetMapping("/prboard")
-    public String prboard() {
+    public String prboard(Model model, @LoginUser SessionUser user) {
+        model.addAttribute("posts", postsService.findAllDesc());
+        if (user != null) {
+            model.addAttribute("myName", user.getName());
+        }
         return "prboard";
     }
 

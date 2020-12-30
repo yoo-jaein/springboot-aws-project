@@ -3,12 +3,12 @@
 {{>layout/navbar}}
 
 <!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-light" style="color: #dcdcdc;">
+<nav class="navbar navbar-expand-lg" style="background-color: #dcdcdc;">
     <div class="container">
-        <div class="navbar-collapse collapse" id="navbarResponsive">
+        <div class="navbar-collapse collapse" id="link_bar">
             <ul class="nav navbar-nav navbar-global">
-                <li class="nav-item "><a class="nav-link" href="/freeboard">자유 게시판</a></li>
-                <li class="nav-item "><a class="nav-link" href="/prboard">홍보 게시판</a></li>
+                <li class="nav-item"><a class="nav-link" href="/freeboard" style="border-bottom-style: solid;">자유 게시판</a></li>
+                <li class="nav-item"><a class="nav-link" href="/prboard">홍보 게시판</a></li>
             </ul>
         </div>
     </div>
@@ -39,6 +39,7 @@
             </tbody>
         </table>
     </div>
+    <a class="btn btn-primary" role="button" href="/posts/save">글 작성</a>
 </div>
 
 {{>layout/footer}}

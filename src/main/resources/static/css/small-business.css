@@ -6,3 +6,10 @@
 body {
   padding-top: 56px;
 }
+#link_bar a:hover {
+    background-color: #cccccc;
+
+}
+#link_bar a {
+    color: black;
+}
