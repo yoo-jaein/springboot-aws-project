@@ -63,4 +63,12 @@ public class IndexController {
         return "prboard";
     }
 
+    @GetMapping("/dashboard")
+    public String dashboard(Model model, @LoginUser SessionUser user) {
+        model.addAttribute("posts", postsService.findAllDesc());
+        if (user != null) {
+            model.addAttribute("myName", user.getName());
+        }
+        return "dashboard";
+    }
 }

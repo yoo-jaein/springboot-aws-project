@@ -1,17 +1,12 @@
 package com.immmy6.springboot.domain.user;
 
 import com.immmy6.springboot.domain.BaseTimeEntity;
+import com.immmy6.springboot.domain.study.Study;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Getter
 @NoArgsConstructor
@@ -27,6 +22,16 @@ public class User extends BaseTimeEntity {
 
     @Column(nullable = false)
     private String email;
+
+    @Column
+    private int point;
+
+    @Column
+    private String introduce;
+
+    @ManyToOne
+    @JoinColumn(name = "STUDY_ID")
+    private Study study;
 
     @Column
     private String picture;
