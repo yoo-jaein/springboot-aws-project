@@ -24,6 +24,7 @@ public class OAuthAttributes {
         this.picture = picture;
     }
 
+    // OAuth2User에서 반환하는 사용자 정보는 Map이기 때문에 값 하나하나를 변환해주는 메소드
     public static OAuthAttributes of(String registrationId, String userNameAttributeName, Map<String, Object> attributes) {
         if("naver".equals(registrationId)) {
             return ofNaver("id", attributes);
@@ -54,11 +55,15 @@ public class OAuthAttributes {
                 .build();
     }
 
+    // User 엔티티를 생성하는 메소드
+    // OAuthAttributes에서 엔티티를 생성하는 시점은 처음 가입할 때
     public User toEntity() {
         return User.builder()
                 .name(name)
                 .email(email)
                 .picture(picture)
+                .point(0)
+                .introduce("안녕하세요!")
                 .role(Role.USER) // 기본 권한은 GUEST, USER만 글 작성 가능
                 .build();
     }

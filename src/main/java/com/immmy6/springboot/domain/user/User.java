@@ -1,12 +1,13 @@
 package com.immmy6.springboot.domain.user;
 
 import com.immmy6.springboot.domain.BaseTimeEntity;
-import com.immmy6.springboot.domain.study.Study;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Getter
 @NoArgsConstructor
@@ -15,6 +16,7 @@ public class User extends BaseTimeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "user_id")
     private Long id;
 
     @Column(nullable = false)
@@ -29,10 +31,6 @@ public class User extends BaseTimeEntity {
     @Column
     private String introduce;
 
-    @ManyToOne
-    @JoinColumn(name = "STUDY_ID")
-    private Study study;
-
     @Column
     private String picture;
 
@@ -41,9 +39,11 @@ public class User extends BaseTimeEntity {
     private Role role;
 
     @Builder
-    public User(String name, String email, String picture, Role role) {
+    public User(String name, String email, int point, String introduce, String picture, Role role) {
         this.name = name;
         this.email = email;
+        this.point = point;
+        this.introduce = introduce;
         this.picture = picture;
         this.role = role;
     }
